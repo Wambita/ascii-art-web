@@ -59,3 +59,13 @@ func TestTab(t *testing.T) {
 		})
 	}
 }
+
+
+func Join(filename string) string {
+	text, err := os.ReadFile(filename)
+	if err != nil {
+		fmt.Println("Test case file not found.")
+	}
+
+	return string(text)
+}
