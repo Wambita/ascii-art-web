@@ -318,6 +318,14 @@ footer{
 
 /*Media queries*/
 @media (max-width: 1100px) {
+  h2 {
+    font-size: 24px;
+  }
+  p, li {
+    font-size: 18px;
+    overflow: auto;
+  }
+  
     .logo{
         font-size: 18px;
         margin: 10px;
@@ -371,7 +379,14 @@ footer{
 
 /*media queries for small screens*/
 @media (max-width: 600px) {
-    .logo{
+  h2 {
+    font-size: 18px;
+  }
+  p, li {
+    font-size: 14px;
+    overflow: auto;
+  }
+   .logo{
         font-size: 18px;
         margin-top: 10px;
         margin-bottom: 10px;
