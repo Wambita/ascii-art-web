@@ -258,10 +258,6 @@ footer{
     display: flex;
     justify-content: space-between;
   }
-
-  .team-member:hover {
-    opacity: 0.8;
-  }
   .team-member {
     padding: 20px;
     display: flex;
@@ -271,6 +267,7 @@ footer{
     border-radius: 10px;
     box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.9);
     font-size: 16px;
+    transition: transform .4s; /*Animation*/
   }
   .team-member img {
     display: block;
@@ -278,6 +275,11 @@ footer{
     height: 80px;
     border-radius: 50%;
     border: 2px solid #34d399;
+    transition: transform .4s; /*Animation*/
+  }
+
+  .team-member:hover, .team-member img:hover {
+    transform: scale(1.2);
   }
   ul, ol {
     padding-left: 20px;
@@ -300,8 +302,8 @@ footer{
     margin-right: 10px;
   }
   .social-links a:hover {
-    opacity: 0.8;
-    text-decoration: none;
+    color: #34d399;
+    text-decoration: underline;
   }
   pres {
     background-color: #2d3748;
