@@ -254,7 +254,6 @@ footer{
     border-radius: 8px;
     padding: 20px;
     margin-bottom: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     display: flex;
     justify-content: space-between;
   }
@@ -279,7 +278,7 @@ footer{
   }
 
   .team-member:hover, .team-member img:hover {
-    transform: scale(1.2);
+    transform: scale(1.1);
   }
   ul, ol {
     padding-left: 20px;
@@ -305,7 +304,7 @@ footer{
     color: #34d399;
     text-decoration: underline;
   }
-  pres {
+  pre {
     background-color: #2d3748;
     padding: 10px;
     border-radius: 5px;
@@ -327,7 +326,7 @@ footer{
   }
   
     .logo{
-        font-size: 18px;
+        font-size: 30px;
         margin: 10px;
         margin-left: 40%;
     }
@@ -387,7 +386,7 @@ footer{
     overflow: auto;
   }
    .logo{
-        font-size: 18px;
+        font-size: 26px;
         margin-top: 10px;
         margin-bottom: 10px;
         margin-left: 25%;
