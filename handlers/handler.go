@@ -107,7 +107,7 @@ func ArtHandler(w http.ResponseWriter, r *http.Request) {
 			return
 		}
 
-		ErrorPageHandler(w, http.StatusInternalServerError, "500 - Internal Server Error")
+		ErrorPageHandler(w, http.StatusBadRequest, "400 - Bad Request")
 		return
 	}
 
