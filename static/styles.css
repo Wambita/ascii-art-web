@@ -247,25 +247,49 @@ footer{
     border-radius: 8px;
     padding: 20px;
     margin-bottom: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 31, 41, 0.1);
+  }
+  .sections {
+    background-color: #1f2937;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
   }
   .team-member {
+    padding: 20px;
     display: flex;
-    align-items: flex-start;
-    margin-bottom: 20px;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.9);
+    font-size: 16px;
+    transition: transform .4s; /*Animation*/
   }
   .team-member img {
-    width: 60px;
-    height: 60px;
+    display: block;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
-    margin-right: 15px;
     border: 2px solid #34d399;
+    transition: transform .4s; /*Animation*/
+  }
+
+  .team-member:hover, .team-member img:hover {
+    transform: scale(1.1);
   }
   ul, ol {
     padding-left: 20px;
   }
   a {
     color: #34d399;
+    text-decoration: none;
+  }
+  .team-member a {
+    text-decoration: none;
+    color: #2ab380;
   }
   a:hover {
     text-decoration: underline;
@@ -277,10 +301,10 @@ footer{
     margin-right: 10px;
   }
   .social-links a:hover {
-    opacity: 0.8;
-    text-decoration: none;
+    color: #34d399;
+    text-decoration: underline;
   }
-  pres {
+  pre {
     background-color: #2d3748;
     padding: 10px;
     border-radius: 5px;
@@ -293,8 +317,16 @@ footer{
 
 /*Media queries*/
 @media (max-width: 1100px) {
+  h2 {
+    font-size: 24px;
+  }
+  p, li {
+    font-size: 18px;
+    overflow: auto;
+  }
+  
     .logo{
-        font-size: 18px;
+        font-size: 30px;
         margin: 10px;
         margin-left: 40%;
     }
@@ -337,12 +369,24 @@ footer{
       font-size: 10px;
       overflow-x: auto;
     }
+    .sections{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
 }
 
 /*media queries for small screens*/
 @media (max-width: 600px) {
-    .logo{
-        font-size: 18px;
+  h2 {
+    font-size: 18px;
+  }
+  p, li {
+    font-size: 14px;
+    overflow: auto;
+  }
+   .logo{
+        font-size: 26px;
         margin-top: 10px;
         margin-bottom: 10px;
         margin-left: 25%;
@@ -390,4 +434,9 @@ footer{
          width: 100%;
          justify-content: space-between;
      }
+     .sections{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
 }
