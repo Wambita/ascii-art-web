@@ -132,98 +132,34 @@ The user can click `go back` to return home to try using the program again
 
 ## Implementation detail: algorithm
 
-* ### assets
-#### Favicon
-It's an icon that represents a specific page and is unique for every website. If you look at the highlighted icon on the image below, the highlighted favicon helps you find the website easily.
+Once you run the program in the using the command `go run .` the program runs on a localhost server with the port provided. When you open the localhost provided you are directed to a page which resembles the image below. 
 
+![alt text](assets/images/input.png)
 
-![alt text](<assets/images/favicon.png>)
+One the text box you enter the words you would like to be turned into word art. Then below it there is a dropdown option which helps you choose which type of bannerfile you can use. We have three options: shadow, thinkertoy and standard.
+Once you have selected the banner file you can click on the submit button to get your word art. This issues a get request to the server which intern takes the word type in the text area and the bannerfile selected as the inputs. When the program is run the following variations of processes occur:
 
-* #### Images
-    Images used within the project are stored here.
-* ### ascii
+### Case 1: Print non-printable character.
+If the character doesn't range between the ascii values 32-126 and is not '\n' or '\t' then it is considered as a bad error and an error message is printed out.
 
-Ascii folder hold the basic project for producing the art
-* #### Art
+![alt text](assets/images/badrequestout.png)
 
-Art combiness the line of Ascii art per slices of the input string and predefined mapping.
+### Case 2: Trying to run invalid page.
+If the user tries to run a page that is not available then a 404 not found error message is printed
 
-* #### Acsii Art Map
+![alt text](<assets/images/not found.png>)
 
-AsciiArt maps uses maps to map a particular character to it's art representation.
+### Case 3: Any other error
+If the program encounters any error that is not specified, it returns an error message 500 internal server error.
 
-* #### Ascii Combine
+![alt text](assets/images/ISE.png)
 
-Ascii Combine Handles newlines aspect in input string,combines all input slices' asciiArt
+### Case 4: printable charachter.
+If the character is printable then it will issue a POST request t the server to return the result of the program to the output textbox.
 
-* #### CheckAssets
+![alt text](assets/images/ouputSh.png)
 
-CheckAsets compares local banner files to the ones in the cloud and updates them if necessary.
-
-* #### Input
-
-Input handles the command feed by the user on the webpage specifically the type of banner they want to use and the text they want to change.
-
-* #### Tab
-
-Tab handles the control character /t which print double space in the ascii folder.
-
-* #### Resources
-
-Resources folder holds all the text resources we use to either text or
-
-
-* ### Handler
-* #### func AboutHandler(w http.ResponseWriter, r *http.Request)
-
-    Handles any error that occures while trying to run the about page.
-
-* #### func HomeHandler(w http.ResponseWriter, r *http.Request) 
-
-    Handles any error that occures while trying to run the homepage
-
-* #### func InstructionsHandler(w http.ResponseWriter, r *http.Request)
-
-   Handles any error that occures while trying to run the instruction page.
-
-* #### func ErrorPageHandler(w http.ResponseWriter, statusCode int, message string)
-
-    Displays any errors that occur in any of the webpage.
-
-* #### func ArtHandler(w http.ResponseWriter, r *http.Request) 
-
-    Handles any error that occures while trying to run the ascii function and the character is not printable.
-
-#### func ArtHandler(w http.ResponseWriter, r *http.Request) 
-
-### Static
-* #### err.sss
-    Handles consistency in the program
-
-* #### styles.css
-    Handles the stylesheets used in the website.
-
-
-* ### Template
-Each template here handles the design and layout of the specified pages which are 
-    1. about.html for the about page
-    2. error.html for the error page
-    3. index.html for the home page 
-    4. instructions.html for the instruction page
-
-* ### Tests
-
-This folder handles the test files used to test the various parts of the code to confirm if each part of the code is working smoothly.
-
-* ### main.go
-
-This is where the handlers in handler file are called and the where the server is run from.
-
-## Limitations
-This project can only print characters in the printable ASCII range from space to tilde `~`. When other characters outside the range are used, the program returns a bad request error.
-
-Be light on using the character combination "\n" and "\r"
-as they  represent newline (or same as you press enter button)
+When running the program one of the four will always occur deppending on what you have issued to the program.
 
 ## Contribution
 

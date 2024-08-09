@@ -1,7 +1,6 @@
 package server
 
 import (
-	"fmt"
 	"net/http"
 	"text/template"
 
@@ -37,7 +36,6 @@ func AboutHandler(w http.ResponseWriter, r *http.Request) {
 	}
 
 	tmpl, err := template.New("about.html").ParseFiles("./template/about.html")
-	fmt.Print(err)
 	if err != nil {
 		ErrorPageHandler(w, http.StatusInternalServerError, "400 Bad Request")
 		return
@@ -55,7 +53,7 @@ func InstructionsHandler(w http.ResponseWriter, r *http.Request) {
 
 	tmpl, err := template.New("instructions.html").ParseFiles("./template/instructions.html")
 	if err != nil {
-		ErrorPageHandler(w, http.StatusInternalServerError, "400 Bad Request")
+		ErrorPageHandler(w, http.StatusBadRequest, "400 Bad Request")
 		return
 	}
 	w.WriteHeader(http.StatusOK)
@@ -109,7 +107,7 @@ func ArtHandler(w http.ResponseWriter, r *http.Request) {
 			return
 		}
 
-		ErrorPageHandler(w, http.StatusInternalServerError, "400 - Bad Request")
+		ErrorPageHandler(w, http.StatusInternalServerError, "500 - Internal Server Error")
 		return
 	}
 
