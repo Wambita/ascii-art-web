@@ -161,6 +161,122 @@ If the character is printable then it will issue a POST request t the server to 
 
 When running the program one of the four will always occur deppending on what you have issued to the program.
 
+
+## Stlying the website
+
+The styling of the website is contained in the `static` folder that has 2 files  `err.css` and `styles.css`.
+
+
+### (i) err.css
+
+   This stylesheet was used to style the error page
+   
+   Here is an overview of how it was achieved.
+
+**1. Global Styles**
+ **Body and HTML:**
+- Resetting Margins and Padding: Removed default margins and padding for a clean layout.
+
+- Full-Height Layout: Ensured the content occupies the full viewport height.
+
+- Font: Used 'Courier New', monospace for a retro, console-like look.
+
+- Background and Text Color: A dark background (#111827) with neon green text (#34d399) for a futuristic feel.
+
+- Overflow: Hidden to prevent scrolling, keeping everything in view.
+
+**2. Container Styling**
+
+- Centering Content: Used flexbox to center the content both horizontally and vertically. 
+
+  The container is set to a column layout, with everything aligned in the center.
+
+**3. Heading (h1)**
+- Large Font Size: Set to 4em for a prominent display.
+  
+- Text Shadow: Added a neon-like glow effect using a soft green shadow.
+
+**4. Paragraph (p)**
+
+- Font Size: Slightly smaller than the heading, set to 1.2em.
+- Margin: Added spacing above and below to separate the text.
+
+**5. ASCII Art (#ascii-art)**
+
+ - Font and Spacing:
+       
+    + Used monospace to maintain the ASCII art's alignment.
+    + Set white-space: pre to preserve the formatting of the ASCII art.
+    + Increased the font weight for a bolder look.
+
+**6. Back Button (#back-button)**
+
+    Button Styling:
+        Simple and minimalistic with padding and a border.
+        Colors match the page's theme, with a neon green border and text.
+        Hover Effect: Reverses the colors on hover to provide visual feedback.
+
+**7. Responsive design for Error Page**
+
+ - Overflow Management:
+        Changed overflow from hidden to auto on body and html to allow vertical scrolling on smaller screens.
+
+ - Container Adjustments:
+        Added padding to .container for better spacing on small screens.
+
+ - Font and Element Size Scaling:
+        Reduced h1 font size from 4em to 2.5em for smaller screens.
+        Resized paragraph text (p) from 1.2em to 1em.
+        Decreased #ascii-art font size to 14px and added overflow-x: auto for horizontal scrolling.
+
+ - Button Adjustments:
+        Reduced #back-button padding and font size to better fit smaller screens.
+
+ - Media Query Implementation:
+        Added a media query for screens with a max-width of 500px to apply all the above changes.
+
+ ### (ii) styles.css
+    Handles the styling used for the home, aboutr and instructions page. Here is an overview of how this was achieved.
+
+**1. Global and Body Styling**
+
+ - Font and Color: The body uses 'Poppins', Arial, sans-serif for a modern and clean look, with a consistent font size of 18px. The text color is set to a light shade (#f0f0f0), while the background is a dark shade (#111827).
+ - Box Sizing and Padding: box-sizing: border-box ensures padding and borders are included in the element's total width and height, with 20px padding for spacing.
+
+**2. Main Container (.content-wrapper)**
+
+ - Layout and Spacing: The main content wrapper is centered with a max-width of 1200px, a flexible width, and padding. It has a flex-column layout, making it easy to stack elements vertically.
+ - Borders and Shadows: A 2px solid #444 border with a 15px border-radius and box-shadow adds depth to the container.
+
+**3. Navbar**
+
+ - Flex Layout: The navbar uses flexbox to distribute items evenly, with the logo on one side and navigation links on the other.
+ - Styling: The background is dark (#1f2937), with a soft shadow and rounded corners for a polished look. The logo is highlighted in mint green (#34d399).
+
+**3. Form and Output Sections (.container, .form-container, .output-section)**
+
+ - Responsive Design: The form and output sections are designed to be flexible, with padding, rounded corners, and box shadows. The input elements (like input, select, textarea) have a consistent design with borders, rounded corners, and background colors that match the dark theme.
+ - Text Areas: Text areas are styled for readability, with adjustable height and a focus on maintaining the overall color scheme.
+
+**4. Footer**
+
+- The footer uses a similar dark background with light text, flexbox for layout, and a shadow for depth. The GitHub icon is styled to match the page's theme.
+
+**5. Page-Specific Styling**
+
+ - ASCII Art (.ascii-art): Styled with a monospace font for alignment and mint green text for contrast. This element is responsive, with font size adjustments based on screen size.
+ 
+ - Instructions and About Pages:
+    + Instructions Page (.instruction-step, .tip, .ascii-table): Instructions are presented in clearly defined sections with a dark background and rounded corners. Tips and ASCII tables have distinct borders and padding for emphasis.
+
+ - About Page (.sections, .team-member): Team members are displayed in a grid layout with responsive behavior. Hover effects are applied for interactivity, scaling the elements slightly.
+
+**6. Responsive Design**
+
+ - Media Queries: The CSS includes breakpoints for screens max-width: 1100px and max-width: 600px. Adjustments include font resizing, reflowing of navigation links, and making containers more compact for smaller screens.
+ 
+
+
 ## Contribution
 
 Contributions are welcome. Please adhere to the existing coding standards and include unit tests for any new features or changes. Ensure to thoroughly test the code before pushing any updates.
