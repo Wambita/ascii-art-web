@@ -5,7 +5,7 @@ body, html {
     font-family: 'Courier New', monospace;
     background: #111827;
     color: #34d399;
-    overflow: hidden;
+    overflow: auto;
   }
   .container {
     display: flex;
@@ -14,6 +14,7 @@ body, html {
     align-items: center;
     height: 100%;
     text-align: center;
+    padding: 20px;
   }
   h1 {
     font-size: 4em;
@@ -31,6 +32,7 @@ body, html {
     font-size: 18px;
     margin: 20px 0;
     font-weight: 700;
+    overflow-x: auto;
   }
   #back-button {
     margin-top: 20px;
@@ -47,3 +49,29 @@ body, html {
     background: #34d399;
     color: #111827;
   }
+
+
+  /* Responsive styling for screens smaller than 500px */
+@media (max-width: 500px) {
+  h1 {
+      font-size: 2.5em; /* Reduced font size for smaller screens */
+  }
+
+  p {
+      font-size: 1em; /* Adjusted font size */
+  }
+
+  #ascii-art {
+      font-size: 14px; /* Reduced font size for smaller screens */
+  }
+
+  #back-button {
+      padding: 8px 16px; /* Adjusted padding for smaller buttons */
+      font-size: 0.9em; /* Slightly smaller text */
+  }
+
+  .container {
+      padding: 10px; /* Smaller padding for mobile devices */
+      height: auto; /* Allows content to dictate height */
+  }
+}
