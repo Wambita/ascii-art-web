@@ -101,7 +101,7 @@ input, select,textarea {
 
 textarea{
     min-height: 150px;
-    resize: vertical;
+    resize: none;
 }
 button {
     padding: 12px 24px;
