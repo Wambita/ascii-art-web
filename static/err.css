@@ -32,7 +32,6 @@ body, html {
     font-size: 18px;
     margin: 20px 0;
     font-weight: 700;
-    overflow-x: auto;
   }
   #back-button {
     margin-top: 20px;
@@ -63,7 +62,8 @@ body, html {
   }
 
   #ascii-art {
-      font-size: 14px; /* Reduced font size for smaller screens */
+      font-size: 12px; /* Reduced font size for smaller screens */
+      overflow: auto;
   }
 
   #back-button {
