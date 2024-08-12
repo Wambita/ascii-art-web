@@ -407,10 +407,10 @@ footer{
     font-family: monospace;
     white-space: pre;
     font-weight: 600;
-    font-size: 8px;
+    font-size: 7px;
     line-height: 1;
     color: #34d399;
-    overflow: hidden;
+    overflow: auto;
     text-align: center;
     }
     .form-container, .output-section {
