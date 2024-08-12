@@ -42,7 +42,7 @@ body, html {
     background: #111827;
     color: #34d399;
     border: 2px solid #34d399;
-    cursor: pointer;
+    cursor: pointer;  
     transition: all 0.3s;
   }
   #back-button:hover {
@@ -53,6 +53,7 @@ body, html {
 
   /* Responsive styling for screens smaller than 500px */
 @media (max-width: 500px) {
+  
   h1 {
       font-size: 2.5em; /* Reduced font size for smaller screens */
   }
@@ -72,6 +73,5 @@ body, html {
 
   .container {
       padding: 10px; /* Smaller padding for mobile devices */
-      height: auto; /* Allows content to dictate height */
   }
 }

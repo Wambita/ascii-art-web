@@ -367,7 +367,7 @@ footer{
     }
     .ascii-art{
       font-size: 10px;
-      overflow-x: auto;
+
     }
     .sections{
       display: flex;
